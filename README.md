@@ -1,31 +1,107 @@
-<<<<<<< HEAD
-# RebookNg
+# 📚 RebookNg - ระบบร้านหนังสือออนไลน์
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.16.
+RebookNg เป็นโปรเจกต์ระบบร้านหนังสือออนไลน์ พัฒนาโดยใช้ Angular (Frontend) และ Spring Boot (Backend) รองรับการจัดการหนังสือ คำสั่งซื้อ ตะกร้าสินค้า ผู้ขาย ผู้ใช้ และรีวิว
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🚀 Tech Stack
 
-## Code scaffolding
+| Layer        | Technology         |
+|--------------|--------------------|
+| Frontend     | Angular 18         |
+| Backend      | Spring Boot        |
+| Styling      | Bootstrap / Tailwind (เลือกได้) |
+| Database     | MySQL / PostgreSQL |
+| Auth         | Google Login (OAuth2), JWT      |
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## 📦 โฟลเดอร์โครงสร้างหลัก (Frontend)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```
+src/
+├── app/
+│   ├── core/          # Auth guard, Interceptors, Services
+│   ├── shared/        # Components ที่ใช้ร่วมกัน
+│   ├── modules/       # Feature Modules (book, cart, order, user)
+│   └── app-routing.module.ts
+│   └── app.module.ts
+```
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 🔧 การติดตั้งโปรเจกต์
 
-## Running end-to-end tests
+### 1. Clone โปรเจกต์
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+git clone https://github.com/sodelight26/rebook-ng.git
+cd rebook-ng
+```
 
-## Further help
+### 2. ติดตั้ง dependencies
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-=======
-# rebook-ng
->>>>>>> f67083f0c867c91197212040753adb9360c21556
+```bash
+npm install
+```
+
+### 3. รัน Angular dev server
+
+```bash
+ng serve
+```
+
+> เปิดเว็บที่ `http://localhost:4200`
+
+---
+
+## 📘 คำสั่งอื่นที่ใช้งานบ่อย
+
+### สร้าง Component, Module, Service:
+
+```bash
+ng generate component components/book-list
+ng generate service services/book
+ng generate module modules/book --routing
+```
+
+---
+
+## 🧪 Unit Testing
+
+```bash
+ng test
+```
+
+## ⚙️ Build
+
+```bash
+ng build
+```
+
+---
+
+## 🔐 ระบบ Authentication
+
+- Login ด้วย Google (OAuth2)
+- ตรวจสอบ token ด้วย Interceptor
+- Backend รองรับการ verify Google ID token และออก JWT
+
+---
+
+## ✅ ฟีเจอร์ในระบบ
+
+- 🔍 ค้นหาหนังสือ
+- 🛒 เพิ่มสินค้าลงตะกร้า
+- 📦 ทำรายการสั่งซื้อ
+- 📝 รีวิวหนังสือ
+- 🧍‍♀️ ระบบผู้ใช้ + ผู้ขาย
+- 📊 จัดการสินค้า + แพ็กสินค้า
+- 🔔 การแจ้งเตือน (Notification)
+
+---
+
+## 👨‍💻 ผู้พัฒนา
+
+> พัฒนาโดย [@sodelight26](https://github.com/sodelight26)  
+> หากคุณชอบโปรเจกต์นี้ ฝาก ⭐ ไว้ที่ GitHub ด้วยนะครับ!
